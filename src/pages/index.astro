@@ -1,4 +1,5 @@
 ---
+let profilePicture = "https://github.com/Ly900/Funny-Cat-Memory-Game/blob/master/assets/images/lilly.jpg?raw=true";
 
 ---
 
@@ -11,6 +12,40 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		
+		<div class="profile">
+			<img width="400px" src={profilePicture} class="profile__picture" />
+
+			<div class="profile__details">
+				<h1>Lilly Nguyen</h1>
+				<h2>16-year old Senior Cat</h2>
+				<p>A sweet and cuddly, but full of attitude, short-hair tabby cat who lives with her owner (and servant), Ly Nguyen.</p>
+			</div>
+		</div>
+
 	</body>
 </html>
+
+<style>
+
+	.profile {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		padding: 1rem 0 3rem 0;
+	}
+
+	.profile__details {
+		flex: 1 0 300px;
+	}
+
+	.profile__details > h1 {
+		margin-top: 0;
+	}
+
+	.profile__picture {
+		border-radius: 50%;
+		margin: 0 2rem 1rem 0;
+	}
+
+</style>
