@@ -1,30 +1,20 @@
 ---
-let profilePicture = "https://github.com/Ly900/Funny-Cat-Memory-Game/blob/master/assets/images/lilly.jpg?raw=true";
-
+import Main from  "../layouts/Main.astro";
+const profilePicture = "https://github.com/Ly900/Funny-Cat-Memory-Game/blob/master/assets/images/lilly.jpg?raw=true";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		
-		<div class="profile">
-			<img width="400px" src={profilePicture} class="profile__picture" />
+<Main>
+	<div class="profile">
+		<img width="300px" src={profilePicture} class="profile__picture" />
 
-			<div class="profile__details">
-				<h1>Lilly Nguyen</h1>
-				<h2>16-year old Senior Cat</h2>
-				<p>A sweet and cuddly, but full of attitude, short-hair tabby cat who lives with her owner (and servant), Ly Nguyen.</p>
-			</div>
+		<div class="profile__details">
+			<h1>Lilly Nguyen</h1>
+			<h2>16-year old Senior Cat</h2>
+			<p>A sweet and cuddly, but full of attitude, short-hair tabby cat who lives with her owner (and servant), Ly Nguyen.</p>
+			<p>Hello</p>
 		</div>
-
-	</body>
-</html>
+	</div>
+</Main>
 
 <style>
 
