@@ -4,7 +4,7 @@ import NavigationBar from '../components/NavigationBar.astro';
 import "../styles/global.css";
 ---
 
-<html lang="en" class="dark">
+<html lang="en" class="">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -15,6 +15,44 @@ import "../styles/global.css";
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+		<script is:inline>
+
+			const DARK_THEME_CLASS = "dark";
+			const COLOR_MODE = "COLOR_MODE";
+			const LIGHT_THEME = "LIGHT";
+			const DARK_THEME = "DARK";
+
+			const rootEl = document.documentElement;
+
+			const getInitialColorMode = () => {
+				const previouslySavedColorMode = window.localStorage.getItem(COLOR_MODE);
+
+				if (previouslySavedColorMode) {
+					return previouslySavedColorMode;
+				}
+
+				if (window.matchMedia("(prefers-color-theme: dark").matches) {
+					return DARK_THEME;
+				}
+
+				return LIGHT_THEME;
+    		}
+
+			const initialColorMode = getInitialColorMode();
+
+			const setInitialColorMode = (mode) => {
+				if (mode === LIGHT_THEME) {
+					rootEl.classList.remove(DARK_THEME_CLASS);
+				} else {
+					rootEl.classList.add(DARK_THEME_CLASS);
+				}
+			}
+
+			setInitialColorMode(initialColorMode);
+
+		</script>
+
 	</head>
 	<body>
 		<main>
