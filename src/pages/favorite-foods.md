@@ -7,5 +7,7 @@ layout: ../layouts/Main.astro
 - Temptations cat treats
 - Rotisserie chicken
 - Shredded chicken
+- Roast duck
 - Salmon from the can with broth
 - Grass and plants
+- Cream and cheese mixture
