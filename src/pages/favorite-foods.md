@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Main.astro
+layout: ../layouts/Blog.astro
 ---
 
 - Fancy Feast ocean whitefish and tuna feast
