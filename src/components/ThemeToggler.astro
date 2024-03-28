@@ -46,18 +46,6 @@
     const toggle = document.querySelector('button');
     const rootEl = document.documentElement;
 
-
-
-    const setInitialColorMode = (mode: string) => {
-        if (mode === LIGHT_THEME) {
-            rootEl.classList.remove(DARK_THEME_CLASS);
-        } else {
-            rootEl.classList.add(DARK_THEME_CLASS);
-        }
-    }
-
-    setInitialColorMode(initialColorMode);
-
     const title = titleCase(`The theme of our user is ${initialColorMode}`);
 
     // alert(title);

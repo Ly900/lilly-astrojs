@@ -3,6 +3,7 @@ html {
 	--grey-200: #222222;
 	--grey-600: #333333;
 	--grey-900: #111111;
+	font-size: 16px;
 }
 
 html.dark {
@@ -23,13 +24,26 @@ h1 {
 	line-height: 1;
 	color: var(--grey-200);
 }
+
 h1 + h2 {
 	font-size: 1.1rem;
 	margin-top: -1.4rem;
 	opacity: 0.9;
 	font-weight: 400;
 }
+
 main {
 	max-width: 40rem;
 	margin: auto;
+}
+
+p,
+li {
+	font-size: 1rem;
+	color: var(--grey-400);
+	opacity: 0.8;
+}
+
+li {
+	margin: 1rem 0;
 }
