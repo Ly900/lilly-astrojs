@@ -9,6 +9,8 @@ type Props = MarkdownLayoutProps<{
 }>;
 
 const { title, subtitle, poster } = Astro.props.frontmatter;
+
+
 ---
 
 <Main title="Lilly Nguyen | Favorite Things">
@@ -18,8 +20,8 @@ const { title, subtitle, poster } = Astro.props.frontmatter;
     <div class="blog-container">
         <figure class="figure">
             <img src={poster} alt="" class="figure__image" />
-            <figcaption>
-                Poster image for {title.toLowerCase()}
+            <figcaption data-title={title} >
+                Poster image for {title}
             </figcaption>
         </figure>
 
@@ -42,3 +44,31 @@ const { title, subtitle, poster } = Astro.props.frontmatter;
     }
 
 </style>
+
+<script>
+    const figcaption = document.querySelector('figcaption');
+    let blogTitle = figcaption.dataset.title;
+    blogTitle = blogTitle.toLowerCase();
+    const titleSplit = blogTitle.split(' ');
+
+    function capitalizeName(title) {
+        console.log("title: ", title);
+        let newTitle = [];
+        for (const word of title) {
+            if (word === "lilly\'s") {
+                newTitle.push("Lilly's");
+            } else {
+                newTitle.push(word);
+            }
+        }
+
+        newTitle = newTitle.join(' ');
+        return newTitle;
+    }
+
+    const modifiedTitle = capitalizeName(titleSplit);
+
+    figcaption.innerHTML = `Poster image for ${modifiedTitle}`;
+
+
+</script>
