@@ -1,9 +1,11 @@
 ---
 import Main from  "../layouts/Main.astro";
+import Cards from "../components/Cards.astro";
 const profilePicture = "https://github.com/Ly900/Funny-Cat-Memory-Game/blob/master/assets/images/lilly.jpg?raw=true";
 ---
 
 <Main title="Lilly Nguyen">
+	
 	<div class="profile">
 		<img width="300px" src={profilePicture} class="profile__picture" />
 
@@ -14,6 +16,28 @@ const profilePicture = "https://github.com/Ly900/Funny-Cat-Memory-Game/blob/mast
 			<p>Hello</p>
 		</div>
 	</div>
+
+	<Cards cards={[
+		{
+			title: "Favorite Foods",
+			gradientFrom: "#eee",
+			gradientTo: "white",
+			to: "/favorite-foods"
+		},
+		{
+			title: "Hobbies",
+			gradientFrom: "#eee",
+			gradientTo: "white",
+			to: "/hobbies"
+		},
+		{
+			title: "Physical Traits",
+			gradientFrom: "#eee",
+			gradientTo: "white",
+			to: "/physical-traits"
+		}
+	]}/>
+
 </Main>
 
 <style>
