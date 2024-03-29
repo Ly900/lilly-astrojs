@@ -2,7 +2,7 @@
 layout: ../layouts/Blog.astro
 title: "Lilly's Physical Traits"
 subtitle: 'Lilly is beautiful'
-poster: '/images/lilly-in-bed.jpeg'
+poster: '/lilly-astrojs/images/lilly-in-bed.jpeg'
 ---
 
 - Large eyes

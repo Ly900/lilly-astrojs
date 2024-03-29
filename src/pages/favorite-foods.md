@@ -2,7 +2,7 @@
 layout: ../layouts/Blog.astro
 title: "Lilly's Favorite Foods"
 subtitle: "These are Lilly's favorite foods but it still depends on how she feels."
-poster: '/images/lilly-waiting-for-food.jpeg'
+poster: '/lilly-astrojs/images/lilly-waiting-for-food.jpeg'
 ---
 
 - Fancy Feast ocean whitefish and tuna feast
