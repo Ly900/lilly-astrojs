@@ -37,7 +37,6 @@
 </style>
 
 <script>
-    import { titleCase } from "title-case";
     const DARK_THEME_CLASS = "dark";
     const COLOR_MODE = "COLOR_MODE";
     const LIGHT_THEME = "LIGHT";
@@ -45,10 +44,6 @@
 
     const toggle = document.querySelector('button');
     const rootEl = document.documentElement;
-
-    const title = titleCase(`The theme of our user is ${initialColorMode}`);
-
-    // alert(title);
 
     if (toggle) {
         toggle.addEventListener("click", () => {

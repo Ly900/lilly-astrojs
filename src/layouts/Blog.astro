@@ -47,27 +47,30 @@ const { title, subtitle, poster } = Astro.props.frontmatter;
 
 <script>
     const figcaption = document.querySelector('figcaption');
-    let blogTitle = figcaption.dataset.title;
-    blogTitle = blogTitle.toLowerCase();
-    const titleSplit = blogTitle.split(' ');
+    let blogTitle = figcaption?.dataset.title;
+    blogTitle = blogTitle?.toLowerCase();
+    const titleSplit = blogTitle?.split(' ');
 
-    function capitalizeName(title) {
-        let newTitle = [];
+    function capitalizeName(title: any) {
+        let titleArray = [];
+        let newTitle;
         for (const word of title) {
             if (word === "lilly\'s") {
-                newTitle.push("Lilly's");
+                titleArray.push("Lilly's");
             } else {
-                newTitle.push(word);
+                titleArray.push(word);
             }
         }
 
-        newTitle = newTitle.join(' ');
+        newTitle = titleArray.join(' ');
         return newTitle;
     }
 
     const modifiedTitle = capitalizeName(titleSplit);
 
-    figcaption.innerHTML = `Poster image for ${modifiedTitle}`;
+    if (figcaption) {
+        figcaption.innerHTML = `Poster image for ${modifiedTitle}`;
+    }
 
 
 </script>

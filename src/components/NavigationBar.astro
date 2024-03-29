@@ -75,5 +75,5 @@ import ThemeToggler from './ThemeToggler.astro';
 <script>
     const { pathname } = window.location;
     const activeNavigationElement = document.querySelector(`nav a[href="${pathname}"]`);
-    activeNavigationElement.classList.add('active');
+    activeNavigationElement?.classList.add('active');
 </script>
