@@ -52,7 +52,6 @@ const { title, subtitle, poster } = Astro.props.frontmatter;
     const titleSplit = blogTitle.split(' ');
 
     function capitalizeName(title) {
-        console.log("title: ", title);
         let newTitle = [];
         for (const word of title) {
             if (word === "lilly\'s") {
