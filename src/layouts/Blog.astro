@@ -15,12 +15,30 @@ const { title, subtitle, poster } = Astro.props.frontmatter;
     <h1>{title}</h1>
     <h2>{subtitle}</h2>
 
-    <figure class="figure">
-        <img src={poster} alt="" height="400px" class="figure__image" />
-        <figcaption>
-            Poster image for {title.toLowerCase()}
-        </figcaption>
-    </figure>
+    <div class="blog-container">
+        <figure class="figure">
+            <img src={poster} alt="" class="figure__image" />
+            <figcaption>
+                Poster image for {title.toLowerCase()}
+            </figcaption>
+        </figure>
 
-    <slot />
+        <slot />
+    </div>
 </Main>
+
+<style>
+    .figure {
+        margin: 0;
+    }
+    .figure__image {
+        margin-bottom: .25em;
+        width: 100%;
+    }
+
+    figcaption {
+        font-size: .9rem;
+        width: 85%;
+    }
+
+</style>

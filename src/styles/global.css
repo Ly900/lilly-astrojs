@@ -30,6 +30,7 @@ h1 + h2 {
 	margin-top: -1.4rem;
 	opacity: 0.9;
 	font-weight: 400;
+	margin-bottom: 1.5em;
 }
 
 main {
@@ -46,4 +47,23 @@ li {
 
 li {
 	margin: 1rem 0;
+}
+
+.blog-container {
+	@media screen and (min-width: 475px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 2.25em;
+	}
+}
+
+.blog-container ul {
+	padding: 0;
+	margin: 0;
+}
+
+.blog-container ul li {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 0.75em;
 }
