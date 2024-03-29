@@ -6,7 +6,7 @@ export type Props = {
     gradientTo: string;
 };
 
-const {to, title} = Astro.props;
+const {to, title, gradientFrom, gradientTo} = Astro.props;
 ---
 
 <a href={to} class="card">
@@ -16,9 +16,10 @@ const {to, title} = Astro.props;
     </div>
 </a>
 
-<style>
+<style define:vars={{gradientFrom, gradientTo}}>
     .card {
         --radius: 10px;
+        background-image: linear-gradient(to right, var(--gradientFrom),var(--gradientTo));
 
         padding: 4px;
         border-radius: var(--radius);
@@ -36,6 +37,18 @@ const {to, title} = Astro.props;
         border-radius: var(--radius);
         display: flex;
         flex-direction: column;
+        color: var(--grey-200);
+        font-size: 1.2rem;
+        transition: .2s all ease-in-out;
+    }
+
+    .card__inner:hover {
+        background: none;
+        font-weight: 500;
+    }
+
+    html.dark .card__inner:hover {
+        text-shadow: 1px 1px 2px black;
     }
 
     .card-footer {
