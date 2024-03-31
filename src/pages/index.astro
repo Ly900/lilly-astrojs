@@ -1,6 +1,7 @@
 ---
 import Main from  "../layouts/Main.astro";
 import Cards from "../components/Cards.astro";
+import { UpvoteContent } from "../components/UpvoteContent.jsx";
 const profilePicture = "/lilly-astrojs/images/lilly-on-harness_11zon.jpg";
 ---
 
@@ -37,6 +38,18 @@ const profilePicture = "/lilly-astrojs/images/lilly-on-harness_11zon.jpg";
 		},
 	]}/>
 
+	<div class="vote__container">
+		<div class="vote__container-inner">
+			<div class="vote__box vote__box-1">
+				<p class="vote">Do you like Lilly? If so, give her a thumbs up!</p>
+			</div>
+			<div class="vote__box vote__box-2">
+				<UpvoteContent />
+			</div>
+		</div>
+	</div>
+
+
 </Main>
 
 <style>
@@ -59,6 +72,41 @@ const profilePicture = "/lilly-astrojs/images/lilly-on-harness_11zon.jpg";
 	.profile__picture {
 		border-radius: 50%;
 		margin: 0 2rem 1rem 0;
+	}
+
+	.vote__container {
+        --radius: 10px;
+        background-image: linear-gradient(to right, orchid, cyan);
+        padding: 4px;
+        border-radius: var(--radius);
+        text-decoration: none;
+        transition: all .2s ease-in-out;
+	}
+
+	.vote__container-inner {
+        background: var(--background);
+        padding: 1.5rem;
+        border-radius: var(--radius);
+        color: var(--grey-200);
+        font-size: 1.2rem;
+        transition: .2s all ease-in-out;
+		@media screen and (min-width: 475px) {
+			display: grid;
+		grid-template-columns: 1fr 2fr;
+			grid-column-gap: 1em;
+		}
+	}
+
+	.vote__box {
+		/* background: yellow; */
+		/* padding: 1em; */
+	}
+
+	.vote {
+        color: var(--grey-200);
+        font-size: 1.2rem;
+		margin-bottom: 1.5em;
+		/* text-align: center; */
 	}
 
 </style>
