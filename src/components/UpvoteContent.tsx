@@ -13,10 +13,10 @@ export const UpvoteContent = () => {
 						prevCount < MAX_COUNT ? prevCount + 1 : prevCount
 					);
 				}}
-				className="h-[80px] w-[80px] rounded-full border border-gray-500 bg-white p-4 text-center text-sm text-red-400 hover:scale-90 active:bg-slate-800 transition-all"
+				className="h-[80px] w-[80px] rounded-full border border-gray-500 bg-white p-4 text-center text-sm text-red-400 hover:scale-90 active:bg-slate-800 transition-all hover:text-red-600"
 			>
 				<svg
-					className="upvote__icon"
+					className="upvote__icon relative -top-1"
 					aria-hidden="true"
 					xmlns="http://www.w3.org/2000/svg"
 					width="50"
