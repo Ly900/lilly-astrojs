@@ -4,6 +4,10 @@
 
 ![image](https://ly900.github.io/lilly-astrojs/images/lilly-astrojs-page-screenshot.png)
 
+**Project Structure:**
+
+![image](https://ly900.github.io/lilly-astrojs/images/astro-project-structure.png)
+
 # Astro Starter Kit: Minimal
 
 ```sh
