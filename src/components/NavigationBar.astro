@@ -78,8 +78,6 @@ import ThemeToggler from './ThemeToggler.astro';
 
 <script>
     const { pathname } = window.location;
-    // console.log('pathname: ', pathname);
     const activeNavigationElement = document.querySelector(`nav a[href="${pathname}"]`);
-    // console.log('activeNavigationElement: ', activeNavigationElement);
     activeNavigationElement?.classList.add('active');
 </script>
