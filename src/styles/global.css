@@ -23,6 +23,7 @@ h1 {
 	font-size: 3rem;
 	line-height: 1;
 	color: var(--grey-200);
+	margin-bottom: 0.2em;
 }
 
 h1 + h2 {
